@@ -3,9 +3,9 @@ title Publisher
 
 REM EDIT THESE VALUES TO SUIT YOUR ENVIRONMENT!
 SET bib=D:\library\Zotero.bib
-SET csl_path=D:\library\citation-styles\styles-master\
+SET csl_path=%~dp0\citation-styles\
 SET default_csl=chicago-fullnote-bibliography.csl
-SET ref_doc=%~dp0/reference.docx
+SET ref_doc=%~dp0\reference.docx
 
 REM Script options: <input file/dir> <output file> <optional citation style>
 SET directory=%~dpnx1
