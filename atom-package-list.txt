@@ -1,0 +1,7 @@
+atom-file-icons@0.7.1  
+date@2.6.0
+document-outline@2.1.2
+language-markdown@0.37.0
+notes-from-pdf@0.4.2
+wordcount@3.1.0
+zotero-picker@2.0.2
