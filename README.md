@@ -11,7 +11,7 @@ The reason I did it is because in between writing, I forget where I have saved m
 ## Requirements
 
 1. Install [Pandoc](https://pandoc.org/installing.html)
-2. Install [Zotero](https://www.zotero.org/download/) (set up [Better BibTex](https://github.com/retorquere/zotero-better-bibtex) export of your library)
+2. Install [Zotero](https://www.zotero.org/download/) (set up [Better BibTex](https://github.com/retorquere/zotero-better-bibtex) export of your library. [This video](https://www.youtube.com/watch?v=GAVXVkcpbG0) is a great tutorial.)
 3. Install [Atom](https://atom.io/)
 
 ## Installation
@@ -19,6 +19,36 @@ The reason I did it is because in between writing, I forget where I have saved m
 1. [Download](https://github.com/sdockray/publisher/archive/master.zip) and unzip somewhere. For example, I might put it in `C:\Users\Sean\scripts`.
 2. Since you have already installed Atom, there are a few extra packages that make academic writing in Atom more pleasant. To install them all quickly, I open the Windows PowerShell (**Windows-x**) and then do `apm install --packages-file C:\Users\Sean\scripts\publisher\atom-package-list.txt`.
 3. Edit the `default-metadata.yaml` file to choose the style you want ([here are the thousands of choices](https://github.com/citation-style-language/styles)) and put the correct path to your Better BibTex export, that you made above).
+
+## Writing
+
+Now you can write in Atom in [Pandoc flavored Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown). Here is an example that includes 95% of what I ever end up using:
+
+```
+---
+---
+title: Patent Futures
+subtitle: The Science Fiction Imaginary in Big Tech Patent Filings
+author: Sean Dockray
+date: 2 November 2019
+---
+# Introduction
+
+Here is some text.
+
+## A section
+
+I need to show you a list.[^longnote1]
+
+* one
+* two[@some_bibtex_id, p.21]
+* three
+
+[^longnote1]: This could be a very long footnote.
+
+```
+
+It's all pretty easy. You can break this up into files, like `0. introduction.md` and `1. the begininng.md` and the script will put them all together for you. You might wonder about `@some_bibtex_id, p.21` and whether I have to look up the id in Zotero for every reference. Luckily, we installed a package in Atom for just this purpose, so just do `Alt-Z` and a little Zotero search interface comes up, which pastes the reference for you.
 
 ## Some notes on citation styles
 
