@@ -32,3 +32,17 @@ csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa
 ```
 
 Above, I've decided to output using APA rather than Chicago for this particular document.
+
+## So you want images too?
+
+1. [Install](https://github.com/lierdakil/pandoc-crossref) . On Windows, I had to download and then move the `pandoc-crossref.exe` to the same location as pandoc (which I found by doing `where.exe pandoc`)
+2. I put my images in an `images` directory alongside all my writing.
+3. In the markdown I just do:
+
+```
+Here, in @Fig:home, is a picture from a Google patent.
+
+![This is a caption.](images/home.jpg){#fig:home}
+```
+
+Note that in `fig:home`, I invented the `home` part. This allows me to easily reference it elsewhere in the document (see `@Fig:home`) and the numbering is taken care of automatically.

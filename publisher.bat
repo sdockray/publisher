@@ -31,7 +31,7 @@ REM This allows the script to run even if the values aren't set
 if "%ref_doc%" neq "" SET cmd_ref=--reference-doc=%ref_doc%
 
 REM Export with pandoc
-pandoc -s -f markdown --verbose --filter=pandoc-citeproc %tempfile% %yaml% -o %outfile% %cmd_ref%
+pandoc -s -f markdown --verbose --filter pandoc-crossref --filter=pandoc-citeproc %tempfile% %yaml% -o %outfile% %cmd_ref%
 
 REM Clean up the temporary file
 del %tempfile% /s /f /q
